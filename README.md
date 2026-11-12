@@ -63,6 +63,19 @@ python -m http.server 8899 -d dist   # 然后打开 http://127.0.0.1:8899
 
 改完配置重新 `npm run build` 即可，无需重启服务。
 
+### 命令速查
+
+| 命令 | 用途 |
+| :--- | :--- |
+| `npm run init-config` | 从 `config/_default/` 初始化 `config/user/`，已存在则跳过 |
+| `npm run dev` | 本地开发，会联网刷新 RSS 与仓库缓存 |
+| `npm run dev:offline` | 离线启动，不联网刷新缓存 |
+| `npm run dev:astro` | Astro 开发服务器，组件热更新 |
+| `npm run build` | 生成静态站点到 `dist/` |
+| `npm run check` | 完整检查（等同于 `check:fast`） |
+| `npm run check:fast` | 语法检查 + 库构建 + `tsc` 类型检查 |
+| `npm run check:browser` | 构建后运行浏览器端契约测试 |
+
 ## 部署
 
 推送到 `main` 分支后，GitHub Actions 自动构建并发布到 Pages，无需手动操作。
