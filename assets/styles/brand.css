@@ -1,0 +1,89 @@
+/* ============================================
+   Tom 信奥 · 品牌覆盖层
+   ============================================
+   只覆盖变量，不复制组件样式。
+   加载顺序最后，因此优先于 tokens/themes。
+   ============================================ */
+
+:root {
+  /* 字体：中文用系统黑体，零网络请求，国内首屏最快 */
+  --font-body:
+    'Noto Sans SC', 'PingFang SC', 'HarmonyOS Sans SC', 'Source Han Sans SC', 'Microsoft YaHei',
+    system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: var(--font-body);
+
+  /* 主色：青绿，与站点 logo 同源 */
+  --accent-color: #38d9a9;
+  --accent-hover: #4ae3b5;
+  --accent-rgb: 56, 217, 169;
+
+  --highlight-bg: rgba(56, 217, 169, 0.22);
+
+  /* 主渐变：青绿 → 青蓝，代码感 */
+  --gradient-color: linear-gradient(135deg, #38d9a9 0%, #22b8cf 55%, #4c6ef5 100%);
+  --gradient-color-simple: linear-gradient(135deg, #38d9a9 0%, #22b8cf 100%);
+
+  /* 热度层级跟随品牌色 */
+  --gh-level-1-token: rgba(56, 217, 169, 0.3);
+  --gh-level-2-token: rgba(56, 217, 169, 0.5);
+  --gh-level-3-token: rgba(56, 217, 169, 0.72);
+  --gh-level-4-token: rgba(56, 217, 169, 0.95);
+}
+
+/* 代码与等宽内容：优先 JetBrains Mono */
+code,
+pre,
+kbd,
+samp,
+.code,
+.content pre,
+.content code {
+  font-family:
+    'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+  font-variant-ligatures: contextual;
+}
+
+/* 站点头像/Logo 区：让品牌字更有分量 */
+.sidebar-logo,
+.logo-text {
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+/* 首页大标题取消强制大写：'Tom 信奥' 不应变成 'TOM 信奥' */
+.welcome-title {
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+/* 侧边栏页脚版权：居中排版，与站点信息留出间距 */
+.sidebar-footer .copyright p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* 站点卡片：名称保持单行（中文不拆字），描述放宽到两行 */
+/* min(238px, 100%) 保证窄屏时自动降为单列，不会逼出横向滚动 */
+.sites-grid,
+.group-level-3 .sites-grid,
+.category-level-3 .sites-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(238px, 100%), 1fr));
+}
+
+.site-card h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-card p {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.45;
+}

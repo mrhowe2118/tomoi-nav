@@ -1,0 +1,106 @@
+# 学习资料 · 从语言基础到算法专题
+title: 学习
+subtitle: 教程 · 可视化 · 数学工具
+
+template: page
+
+categories:
+  - name: 系统学算法
+    icon: fas fa-layer-group
+    sites:
+      - name: OI Wiki
+        url: https://oi-wiki.org
+        icon: fas fa-book
+        description: 信奥知识体系最全的中文手册，带证明与复杂度分析
+      - name: Hello 算法
+        url: https://www.hello-algo.com
+        icon: fas fa-laptop-code
+        description: 开源图解数据结构与算法，动画演示，入门极友好
+      - name: AcWing 算法基础课
+        url: https://www.acwing.com/activity/content/11/
+        icon: fas fa-graduation-cap
+        description: 从排序到图论的完整课程，配套题目按知识点编排
+      - name: CSES Problem Set
+        url: https://cses.fi/problemset/
+        icon: fas fa-list-ol
+        description: 300 道经典题覆盖全部基础专题，适合系统过一遍
+
+  - name: C++ 语言
+    icon: fas fa-file-code
+    sites:
+      - name: cppreference 中文
+        url: https://zh.cppreference.com
+        icon: fas fa-book
+        description: 标准库权威参考，语法的最终解释权
+      - name: Learn C++
+        url: https://www.learncpp.com
+        icon: fas fa-graduation-cap
+        description: 英文 C++ 教程里讲得最透的一套，从零到现代 C++
+      - name: 菜鸟教程 C++
+        url: https://www.runoob.com/cplusplus/cpp-tutorial.html
+        icon: fas fa-file-alt
+        description: 中文速查型教程，语法忘了随手翻
+      - name: C++ Insights
+        url: https://cppinsights.io
+        icon: fas fa-microscope
+        description: 把代码展开成编译器眼中的样子，看清语法糖本质
+
+  - name: 算法可视化
+    icon: fas fa-project-diagram
+    sites:
+      - name: VisuAlgo
+        url: https://visualgo.net/zh
+        icon: fas fa-play-circle
+        description: 排序、树、图、字符串算法逐帧演示，支持中文
+      - name: USFCA 数据结构可视化
+        url: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+        icon: fas fa-sitemap
+        description: 老牌可视化站点，平衡树与图算法的插入删除过程很直观
+      - name: Algorithm Visualizer
+        url: https://algorithm-visualizer.org
+        icon: fas fa-eye
+        description: 可自己写代码驱动动画，看清每一步数据变化
+      - name: Pathfinding Visualizer
+        url: https://clementmihailescu.github.io/Pathfinding-Visualizer/
+        icon: fas fa-route
+        description: BFS/DFS/A* 在同一张网格上跑，直观对比搜索策略差异
+
+  - name: 数学工具
+    icon: fas fa-square-root-alt
+    sites:
+      - name: Desmos
+        url: https://www.desmos.com/calculator
+        icon: fas fa-chart-line
+        description: 函数图像秒出，验证公式与不等式的最快途径
+      - name: GeoGebra
+        url: https://www.geogebra.org/calculator
+        icon: fas fa-drafting-compass
+        description: 几何与代数联动，计算几何题画图靠它
+      - name: OEIS 整数数列
+        url: https://oeis.org
+        icon: fas fa-list-ol
+        description: 手推数列找不到规律时，输进去看它是什么
+      - name: Wolfram Alpha
+        url: https://www.wolframalpha.com
+        icon: fas fa-calculator
+        description: 复杂求和、递推、矩阵直接算（国内访问偏慢）
+
+  - name: 视频与社区
+    icon: fas fa-comments
+    sites:
+      - name: 哔哩哔哩
+        url: https://www.bilibili.com
+        icon: fab fa-bilibili
+        description: 算法讲解视频集中地，搜题号常有意外收获
+      - name: 知乎
+        url: https://www.zhihu.com
+        icon: fab fa-zhihu
+        description: 学习方法与竞赛经验长文较多
+      - name: 博客园
+        url: https://www.cnblogs.com
+        icon: fas fa-blog
+        description: 老牌技术博客，OI 题解质量整体偏高
+      - name: Stack Overflow
+        url: https://stackoverflow.com
+        icon: fas fa-stack-overflow
+        description: 代码报错先在这搜，英文提问规范也值得学

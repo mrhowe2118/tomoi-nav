@@ -32,7 +32,7 @@ const { page = {} } = Astro.props;
         </div>
         <button
           class="panel-icon-btn add-btn"
-          title="Add Todo"
+          title="添加待办"
           onclick="window.menavTodoApp.toggleInput()"
         >
           <span class="fas fa-plus"></span>
@@ -47,7 +47,12 @@ const { page = {} } = Astro.props;
           id="todo-input-container"
           style="display: none; padding: var(--spacing-md);"
         >
-          <input type="text" class="todo-input" id="todo-input-field" placeholder="New task..." />
+          <input
+            type="text"
+            class="todo-input"
+            id="todo-input-field"
+            placeholder="今天要做什么？"
+          />
           <button class="todo-add-btn-small" type="button">
             <span class="fas fa-arrow-right"></span>
           </button>
@@ -67,10 +72,10 @@ const { page = {} } = Astro.props;
     }
 
     function getGreeting(hour) {
-      if (hour < 5) return 'Good Night';
-      if (hour < 12) return 'Good Morning';
-      if (hour < 18) return 'Good Afternoon';
-      return 'Good Evening';
+      if (hour < 5) return '夜深了';
+      if (hour < 12) return '早上好';
+      if (hour < 18) return '下午好';
+      return '晚上好';
     }
 
     function updateDashboardClock() {
@@ -86,13 +91,13 @@ const { page = {} } = Astro.props;
         hour: '2-digit',
         minute: '2-digit',
       });
-      dateEl.textContent = now.toLocaleDateString('en-US', {
-        weekday: 'short',
-        month: 'short',
+      dateEl.textContent = now.toLocaleDateString('zh-CN', {
+        month: 'long',
         day: 'numeric',
+        weekday: 'short',
       });
       if (greetingEl) greetingEl.textContent = getGreeting(now.getHours());
-      if (weekEl) weekEl.textContent = 'Week ' + getWeekNumber(now);
+      if (weekEl) weekEl.textContent = '第 ' + getWeekNumber(now) + ' 周';
     }
 
     setInterval(updateDashboardClock, 1000);
@@ -129,8 +134,8 @@ const { page = {} } = Astro.props;
           this.todos = raw
             ? JSON.parse(raw)
             : [
-                { text: 'Drink Water', done: false },
-                { text: 'Explore MeNav', done: true },
+                { text: '今天刷 3 道题', done: false },
+                { text: '整理错题本', done: false },
               ];
         } catch (e) {
           this.todos = [];

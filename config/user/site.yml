@@ -1,0 +1,93 @@
+# ============================================================
+# Tom 信奥导航 · 站点主配置
+# 本文件完全替换 config/_default/site.yml
+# ============================================================
+
+# ---------- 网站基本信息 ----------
+title: Tom 信奥
+description: 信息学竞赛学习资源导航 · 题库、OI Wiki、在线工具一站直达
+author: Tom
+favicon: tomshengo.svg
+logo_text: Tom 信奥
+
+# ---------- 图标 ----------
+icons:
+  # favicon：按站点域名自动抓取图标；抓不到时回退到 icon 字段
+  mode: favicon
+  # cn：优先走国内 gstatic.cn 节点，学生端加载更快
+  region: cn
+
+# ---------- 安全策略 ----------
+security:
+  allowedSchemes:
+    - http
+    - https
+    - mailto
+    - tel
+
+# ---------- 主题 ----------
+theme:
+  mode: dark
+
+# ---------- 字体 ----------
+# system：不发起任何字体请求，直接使用系统字体栈（国内秒开）
+# 字体家族细节在 assets/style.css 的 --font 覆盖中定义
+fonts:
+  source: system
+
+# ---------- 首页欢迎语 ----------
+profile:
+  title: Tom 信奥
+  subtitle: 信息学竞赛 · 学习资源导航
+
+# ---------- 关闭不需要的模块 ----------
+# RSS 聚合与 GitHub 项目墙对学生导航页无价值，关闭以减少构建耗时与外部请求
+rss:
+  enabled: false
+  cacheDir: dev
+  fetch:
+    timeoutMs: 10000
+    totalTimeoutMs: 60000
+    concurrency: 5
+    maxRetries: 1
+    maxRedirects: 3
+  articles:
+    perSite: 8
+    total: 50
+    summaryMaxLength: 200
+
+github:
+  username: 'mrhowe2118'
+  heatmapColor: 38d9a9
+  cacheDir: dev
+
+# ---------- 侧边栏社交链接 ----------
+social:
+  - name: GitHub
+    url: https://github.com/mrhowe2118
+    icon: fab fa-github
+  # 以下两项等你提供账号地址后取消注释即可（找不到账号不敢乱填）
+  # - name: 哔哩哔哩
+  #   url: https://space.bilibili.com/你的UID
+  #   icon: fab fa-bilibili
+  # - name: 小红书
+  #   url: https://www.xiaohongshu.com/user/profile/你的ID
+  #   icon: fas fa-book-open
+
+# ---------- 导航（第一项即首页）----------
+navigation:
+  - name: 首页
+    icon: fas fa-home
+    id: home
+  - name: 题库
+    icon: fas fa-code
+    id: oj
+  - name: 学习
+    icon: fas fa-book-open
+    id: learn
+  - name: 工具
+    icon: fas fa-toolbox
+    id: tools
+  - name: 关于
+    icon: fas fa-info-circle
+    id: content

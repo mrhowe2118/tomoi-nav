@@ -1,0 +1,98 @@
+# 题库 · 在线评测系统
+title: 题库
+subtitle: 在线评测系统全收录
+
+template: page
+
+categories:
+  - name: 国内主力
+    icon: fas fa-flag
+    sites:
+      - name: 洛谷
+        url: https://www.luogu.com.cn/problem/list
+        icon: fas fa-code
+        description: 中文题目最全，题解质量高，从入门到省选都能刷
+      - name: AcWing
+        url: https://www.acwing.com/problem/
+        icon: fas fa-graduation-cap
+        description: 题面规范、难度分层清晰，配套课程讲解
+      - name: 牛客竞赛
+        url: https://ac.nowcoder.com/acm/home
+        icon: fas fa-bullseye
+        description: 周赛与校招笔试并重，赛制贴近正式比赛
+      - name: LibreOJ
+        url: https://loj.ac
+        icon: fas fa-server
+        description: 原题与省选/NOI 真题，评测机快
+      - name: UOJ
+        url: https://uoj.ac
+        icon: fas fa-flask
+        description: 高质量自主题，难度偏高，适合拔高
+      - name: 一本通在线测评
+        url: http://ybt.ssoier.cn:8088/
+        icon: fas fa-book
+        description: 《信息学奥赛一本通》配套题库，教学同步刷
+
+  - name: 国际赛场
+    icon: fas fa-globe
+    sites:
+      - name: Codeforces
+        url: https://codeforces.com/problemset
+        icon: fas fa-trophy
+        description: 全球最大算法竞赛平台，Div2 适合从入门往上打
+      - name: AtCoder
+        url: https://atcoder.jp
+        icon: fas fa-trophy
+        description: 日本题库，题目干净，ABC 适合新手起步
+      - name: CSES Problem Set
+        url: https://cses.fi/problemset/
+        icon: fas fa-list-ol
+        description: 经典 300 题，按专题编排，从基础到进阶系统过一遍
+      - name: USACO
+        url: https://usaco.org
+        icon: fas fa-seedling
+        description: 美国信奥官方题库，Training 章节适合循序渐进
+      - name: Kattis
+        url: https://open.kattis.com
+        icon: fas fa-cube
+        description: 大量高校赛题，题型杂，练英文题面
+      - name: UVa Online Judge
+        url: https://onlinejudge.org
+        icon: fas fa-scroll
+        description: 最老的在线评测，经典算法题源头（国内访问偏慢）
+
+  - name: 官方与赛事
+    icon: fas fa-award
+    sites:
+      - name: NOI 官网
+        url: https://www.noi.cn
+        icon: fas fa-flag-checkered
+        description: 中国计算机学会主办，大纲、通知、获奖名单都在这
+      - name: CCF
+        url: https://www.ccf.org.cn
+        icon: fas fa-building
+        description: 主办单位，CSP-J/S 与 NOIP 报名入口
+      - name: IOI 官网
+        url: https://ioinformatics.org
+        icon: fas fa-globe
+        description: 国际信息学奥赛官方站点
+      - name: 洛谷比赛日历
+        url: https://www.luogu.com.cn/contest/list
+        icon: fas fa-calendar-alt
+        description: 近期比赛一览，别错过练手机会
+
+  - name: 题单与训练计划
+    icon: fas fa-route
+    sites:
+      - name: 洛谷题单
+        url: https://www.luogu.com.cn/training/list
+        icon: fas fa-list
+        description: 官方与用户整理的专题题单，按知识点成套刷
+      - name: Codeforces Problemset
+        url: https://codeforces.com/problemset
+        icon: fas fa-filter
+        description: 按标签与分数筛选，专攻薄弱算法
+      - name: AtCoder Problems
+        url: https://kenkoooo.com/atcoder/
+        icon: fas fa-table
+        description: 可视化统计 AC 情况，一眼看出哪些题没做

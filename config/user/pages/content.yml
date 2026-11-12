@@ -1,0 +1,7 @@
+title: 关于
+subtitle: Tom 信奥 · 课程与说明
+
+template: content
+
+content:
+  file: content/about.md

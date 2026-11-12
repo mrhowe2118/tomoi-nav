@@ -1,0 +1,63 @@
+# 首页（导航第一项）· 最高频入口精简版
+# 完整资源见「题库」「学习」「工具」三个分页
+title: 首页
+subtitle: 今天从哪开始
+
+template: page
+
+categories:
+  - name: 打开就干活
+    icon: fas fa-bolt
+    sites:
+      - name: 洛谷
+        url: https://www.luogu.com.cn
+        icon: fas fa-code
+        description: 国内信奥刷题主战场，题解与讨论都在这里
+      - name: OI Wiki
+        url: https://oi-wiki.org
+        icon: fas fa-book
+        description: 算法竞赛知识手册，写不出题先来这查
+      - name: AcWing
+        url: https://www.acwing.com
+        icon: fas fa-graduation-cap
+        description: 算法课程与题库，基础课体系完整
+      - name: CP Editor
+        url: https://cpeditor.org
+        icon: fas fa-laptop-code
+        description: 竞赛专用编辑器，一键编译对拍，比赛必备
+
+  - name: 查代码查结论
+    icon: fas fa-search
+    sites:
+      - name: cppreference 中文
+        url: https://zh.cppreference.com
+        icon: fas fa-book
+        description: C++ 标准库权威手册，看到不认识的函数就查
+      - name: Compiler Explorer
+        url: https://godbolt.org
+        icon: fas fa-microchip
+        description: 在线看汇编输出，理解代码到底编译成了什么
+      - name: VisuAlgo
+        url: https://visualgo.net/zh
+        icon: fas fa-project-diagram
+        description: 算法过程可视化，排序、图论、树都能一步步看
+      - name: Desmos
+        url: https://www.desmos.com/calculator
+        icon: fas fa-chart-line
+        description: 在线函数图像，验证数学结论最快的方式
+
+  - name: Tom 信奥
+    icon: fas fa-user-astronaut
+    sites:
+      - name: 哔哩哔哩
+        url: https://www.bilibili.com
+        icon: fab fa-bilibili
+        description: 算法讲解视频（账号地址待补充）
+      - name: GitHub
+        url: https://github.com/mrhowe2118
+        icon: fab fa-github
+        description: 课程代码与教学项目
+      - name: 关于课程体系
+        url: /?page=content
+        icon: fas fa-info-circle
+        description: B1–B6 六阶段课程说明

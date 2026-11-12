@@ -1,0 +1,82 @@
+# 工具 · 编程环境与解题辅助
+title: 工具
+subtitle: 编程环境 · 调试 · 绘图
+
+template: page
+
+categories:
+  - name: 编程环境
+    icon: fas fa-laptop-code
+    sites:
+      - name: CP Editor
+        url: https://cpeditor.org
+        icon: fas fa-terminal
+        description: 专为算法竞赛设计，内置编译、运行、对拍、模板
+      - name: VS Code
+        url: https://code.visualstudio.com
+        icon: fas fa-code
+        description: 通用编辑器，装 C/C++ 扩展就是完整开发环境
+      - name: 小熊猫 Dev-C++
+        url: https://royqh.net/redpandacpp/
+        icon: fas fa-paw
+        description: 老 Dev-C++ 的现代化重制，开箱即用，适合机房统一装
+      - name: 洛谷在线 IDE
+        url: https://www.luogu.com.cn/ide
+        icon: fas fa-cloud
+        description: 浏览器里直接写，换机器不用配环境
+
+  - name: 运行与调试
+    icon: fas fa-bug
+    sites:
+      - name: Compiler Explorer
+        url: https://godbolt.org
+        icon: fas fa-microchip
+        description: 在线看 C++ 编译成什么汇编，理解优化与未定义行为
+      - name: OnlineGDB
+        url: https://www.onlinegdb.com
+        icon: fas fa-play
+        description: 在线断点调试，没装环境时也能单步跟踪
+      - name: Diff Checker
+        url: https://www.diffchecker.com
+        icon: fas fa-exchange-alt
+        description: 两份代码或输出逐行对比，对拍找差异用得上
+      - name: Regex101
+        url: https://regex101.com
+        icon: fas fa-search
+        description: 正则表达式分步解释，字符串处理题调试利器
+
+  - name: 画图与表达
+    icon: fas fa-palette
+    sites:
+      - name: Excalidraw
+        url: https://excalidraw.com
+        icon: fas fa-pencil-alt
+        description: 手绘风格白板，讲思路、画图论模型最顺手
+      - name: draw.io
+        url: https://app.diagrams.net
+        icon: fas fa-project-diagram
+        description: 流程图与结构图，导出清晰，写题解配图用
+      - name: Mermaid Live
+        url: https://mermaid.live
+        icon: fas fa-code-branch
+        description: 用文本画流程图，改起来比拖拽快
+      - name: Carbon
+        url: https://carbon.now.sh
+        icon: fas fa-image
+        description: 把代码变成好看的图片，做课件和分享常用
+
+  - name: 效率杂项
+    icon: fas fa-toolbox
+    sites:
+      - name: DeepL
+        url: https://www.deepl.com/translator
+        icon: fas fa-language
+        description: 读英文题面时翻译，术语准确度高于普通机翻
+      - name: LaTeX Live
+        url: https://www.latexlive.com
+        icon: fas fa-square-root-alt
+        description: 在线编辑数学公式，导出图片贴进题解或讲义
+      - name: TinyPNG
+        url: https://tinypng.com
+        icon: fas fa-compress
+        description: 图片压缩，讲义和课件体积能砍掉一大半
