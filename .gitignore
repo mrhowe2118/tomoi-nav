@@ -65,3 +65,5 @@ REVIEW.md
 /.playwright-mcp/
 public/tomshengo.svg
 .workbuddy/
+public/favicon.png
+public/logo-mark.png

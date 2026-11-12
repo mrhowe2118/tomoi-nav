@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/tomshengo.svg" alt="Tom 信奥" width="96">
+  <img src="assets/logo-full.png" alt="Tom 信奥" width="300">
   <h1>Tom 信奥导航</h1>
   <p>信息学竞赛学习资源导航 · 题库 / 学习 / 工具一站直达</p>
 </div>
@@ -79,17 +79,29 @@ python -m http.server 8899 -d dist   # 然后打开 http://127.0.0.1:8899
 | 项目 | 取值 | 原因 |
 | :--- | :--- | :--- |
 | 主题 | 暗色 | 长时间看屏，与教学课件风格统一 |
-| 主色 | `#38d9a9` 青绿 | 与站点图标同源 |
+| 品牌色 | `#253B7E` 深藏蓝 | 取自正式 logo |
+| 强调色 | 暗色 `#6B8AE6` / 亮色 `#3B57B8` | 深蓝在暗底不可读（对比度 2.3:1），按主题取提亮/加深版本 |
 | 字体 | 系统黑体栈（Noto Sans SC → 苹方 → 微软雅黑） | 零字体请求，国内首屏最快 |
 | 代码字体 | JetBrains Mono → Cascadia → Consolas | 讲解代码时字重清晰 |
 | 卡片布局 | 桌面 4 列 / 手机单列 | 手机上描述能完整显示 |
 
 品牌覆盖层在 `assets/styles/brand.css`，只覆盖变量与少量排版，不改动上游组件结构。
 
+### 图标资产
+
+| 文件 | 用途 | 说明 |
+| :--- | :--- | :--- |
+| `assets/favicon.png` | 浏览器标签页 | 白底圆角 + 深蓝熊头，512×512 |
+| `assets/logo-mark.png` | 侧边栏品牌图标 | 深蓝熊头透明底，256×256 |
+| `assets/logo-full.png` | README / 分享场景 | 完整字标，1434×312 |
+
+侧边栏 logo 在暗色主题下由 `filter: brightness(0) invert(1)` 反白，在亮色主题下恢复原色——**一张图适配两套主题，不需要维护白色版本**。
+
 ## 相对上游的改动
 
 - 替换全部站点配置为信奥教学资源
-- 新增 `assets/tomshengo.svg` 站点图标与 `assets/styles/brand.css` 品牌层
+- 新增 `assets/styles/brand.css` 品牌层与三套图标资产
+- 扩展 `scripts/lib/public-assets.ts`：`site.logo` 字段也会复制到产物（上游只处理 `favicon`）
 - 页脚版权改为站点自身的 `site.title`
 - 首页问候语、日期、待办默认项本地化为中文
 - 搜索框提示文案本地化

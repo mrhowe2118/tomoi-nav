@@ -10,6 +10,7 @@ type PublicAssetsLogger = {
 
 type SiteLike = {
   favicon?: string;
+  logo?: string;
 };
 
 type SiteItemLike = {
@@ -211,17 +212,27 @@ function copyLocalFaviconUrls(config: ConfigLike, log: PublicAssetsLogger): void
 }
 
 function copySiteFavicon(config: ConfigLike, log: PublicAssetsLogger): void {
-  const favicon = config && config.site ? config.site.favicon : '';
-  if (!favicon) return;
+  const site = config && config.site ? config.site : null;
+  if (!site) return;
 
-  const candidates = [path.join('assets', favicon), favicon];
-  const src = candidates.find((candidate) => fs.existsSync(candidate));
-  if (!src) {
-    log.warn('favicon 文件不存在', { path: favicon });
-    return;
+  // favicon 与 site.logo 都需要落到站点根目录，否则页面引用会 404
+  const entries: Array<[string, string | undefined]> = [
+    ['favicon', site.favicon],
+    ['logo', site.logo],
+  ];
+
+  for (const [key, fileName] of entries) {
+    if (!fileName) continue;
+
+    const candidates = [path.join('assets', fileName), fileName];
+    const src = candidates.find((candidate) => fs.existsSync(candidate));
+    if (!src) {
+      log.warn(`${key} 文件不存在`, { path: fileName });
+      continue;
+    }
+
+    copyFile(src, path.join('public', path.basename(fileName)));
   }
-
-  copyFile(src, path.join('public', path.basename(favicon)));
 }
 
 function prepareIconAssets(config: ConfigLike, log: PublicAssetsLogger): void {

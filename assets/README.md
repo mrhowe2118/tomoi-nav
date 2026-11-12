@@ -21,12 +21,16 @@
 
 - **styles/**: CSS 模块目录（详见下方）
 
-- **menav.svg**: 网站图标和项目logo
-  - 显示在浏览器标签页、书签和收藏夹中
-  - SVG格式，包含黑色字母"M"和蓝色向上箭头设计
+- **favicon.png**: 浏览器标签页图标
+  - 白底圆角 + 深蓝熊头，512×512
+  - 白底保证在浅色/深色两种标签栏下都能辨识
 
-- **preview_light.png / preview_dark.png**: 主题预览图
-  - 用于 README 文档展示
+- **logo-mark.png**: 侧边栏品牌图标
+  - 深蓝熊头透明底，256×256
+  - 暗色主题由 `brand.css` 的 `filter` 反白，亮色主题还原原色
+
+- **logo-full.png**: 完整字标（熊头 + TOM信奥）
+  - 1434×312，用于 README 与对外分享
 
 ## CSS 模块化架构
 
