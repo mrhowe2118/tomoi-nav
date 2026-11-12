@@ -4,7 +4,7 @@
   <p>信息学竞赛学习资源导航 · 题库 / 学习 / 工具一站直达</p>
 </div>
 
-线上地址：**https://mrhowe2118.github.io/menav-oj/**
+线上地址：**https://mrhowe2118.github.io/tomoi-nav/**
 
 基于 [MeNav](https://github.com/rbetree/menav)（AGPL-3.0）构建的静态导航站，纯 YAML 配置，无需数据库和后端。
 

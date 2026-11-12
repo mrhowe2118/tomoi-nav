@@ -16,7 +16,7 @@
   "engines": {
     "node": ">=22.23.4"
   },
-  "homepage": "https://mrhowe2118.github.io/menav-oj",
+  "homepage": "https://mrhowe2118.github.io/tomoi-nav",
   "scripts": {
     "generate": "node -r ./scripts/register-ts.cjs ./scripts/generate.ts",
     "dev": "node -r ./scripts/register-ts.cjs ./scripts/dev.ts",
