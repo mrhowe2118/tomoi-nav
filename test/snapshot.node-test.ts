@@ -123,7 +123,15 @@ test('现有默认配置经种子和快照往返后卡片、导航和正文等�
     restored.pages.filter((p) => p.templateName === 'content').map((p) => p.data.contentHtml),
     original.pages.filter((p) => p.templateName === 'content').map((p) => p.data.contentHtml)
   );
-  assert.ok(JSON.parse(seed.settings.assets)['menav.svg']);
+  // 站点图标资产必须随快照往返保留。
+  // 断言基于当前生效配置的 favicon / logo，而非写死上游默认的 menav.svg，
+  // 这样在 config/user 覆盖配置后依然成立。
+  const assetKeys = Object.keys(JSON.parse(seed.settings.assets));
+  const expectedAssets = [config.site?.favicon, config.site?.logo].filter(Boolean);
+  assert.ok(expectedAssets.length > 0, '当前配置未声明 favicon / logo');
+  for (const name of expectedAssets) {
+    assert.ok(assetKeys.includes(name as string), `快照资产缺少 ${name}`);
+  }
 });
 
 test('构建刷新按来源合并文章，失败来源保留 D1 数据且忽略仓库缓存', () => {

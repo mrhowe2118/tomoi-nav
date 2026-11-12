@@ -64,12 +64,13 @@ export function createSeed(config: ResolvedConfig) {
       visit
     );
   };
-  const favicon = config.site.favicon;
-  if (favicon) {
-    const candidates = [path.join('assets', favicon), favicon];
+  // favicon 与 site.logo 都要进种子资产，否则快照还原后品牌图标丢失
+  for (const assetName of [config.site.favicon, config.site.logo]) {
+    if (!assetName) continue;
+    const candidates = [path.join('assets', assetName), assetName];
     const source = candidates.find((candidate) => fs.existsSync(candidate));
-    if (!source) throw new ConfigError('站点图标不存在', [favicon]);
-    addAsset(source, favicon.replace(/^\.\//, '').replace(/^\//, ''));
+    if (!source) throw new ConfigError('站点图标不存在', [assetName]);
+    addAsset(source, assetName.replace(/^\.\//, '').replace(/^\//, ''));
   }
   const pages = config.navigation.map((nav) => {
     const page = config.pages[nav.id] ?? {};
