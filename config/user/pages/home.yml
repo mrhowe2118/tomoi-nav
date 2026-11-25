@@ -54,13 +54,17 @@ categories:
         icon: fas fa-book-open
         description: 从零开始的 C++ 竞赛教材，跟着章节顺序学
       - name: 哔哩哔哩
-        url: https://www.bilibili.com
+        url: https://space.bilibili.com/33252951
         icon: fab fa-bilibili
-        description: 算法讲解视频（账号地址待补充）
-      - name: GitHub
-        url: https://github.com/mrhowe2118
-        icon: fab fa-github
-        description: 课程代码与教学项目
+        description: 算法讲解视频，CSP-J/S 专题持续更新
+      - name: 洛谷团队
+        url: https://www.luogu.com.cn/team/81283
+        icon: fas fa-users
+        description: 团队题单、内部比赛与排名
+      - name: vjudge 训练组
+        url: https://vjudge.net/group/tomoic
+        icon: fas fa-trophy
+        description: 跨平台训练赛与专题题单
       - name: 关于课程体系
         url: /?page=content
         icon: fas fa-info-circle

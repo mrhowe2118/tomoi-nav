@@ -33,6 +33,18 @@ categories:
         icon: fas fa-book
         description: 《信息学奥赛一本通》配套题库，教学同步刷
 
+  - name: 我的训练组织
+    icon: fas fa-users
+    sites:
+      - name: 洛谷团队
+        url: https://www.luogu.com.cn/team/81283
+        icon: fas fa-users
+        description: Tom 信奥团队，团队题单、内部比赛与成员排名
+      - name: vjudge 训练组
+        url: https://vjudge.net/group/tomoic
+        icon: fas fa-trophy
+        description: 虚拟评测训练组，跨平台组题与训练赛
+
   - name: 国际赛场
     icon: fas fa-globe
     sites:

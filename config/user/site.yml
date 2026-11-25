@@ -64,13 +64,13 @@ github:
 
 # ---------- 侧边栏社交链接 ----------
 social:
+  - name: 哔哩哔哩
+    url: https://space.bilibili.com/33252951
+    icon: fab fa-bilibili
   - name: GitHub
     url: https://github.com/mrhowe2118
     icon: fab fa-github
-  # 以下两项等你提供账号地址后取消注释即可（找不到账号不敢乱填）
-  # - name: 哔哩哔哩
-  #   url: https://space.bilibili.com/你的UID
-  #   icon: fab fa-bilibili
+  # 小红书地址待补充，取消注释即可
   # - name: 小红书
   #   url: https://www.xiaohongshu.com/user/profile/你的ID
   #   icon: fas fa-book-open
