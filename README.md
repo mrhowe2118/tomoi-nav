@@ -114,7 +114,9 @@ python -m http.server 8899 -d dist   # 然后打开 http://127.0.0.1:8899
 
 - 替换全部站点配置为信奥教学资源
 - 新增 `assets/styles/brand.css` 品牌层与三套图标资产
-- 扩展 `scripts/lib/public-assets.ts`：`site.logo` 字段也会复制到产物（上游只处理 `favicon`）
+- 扩展 `scripts/lib/public-assets.ts` 与 `scripts/lib/seed.ts`：`site.logo` 也会复制到产物并写入快照资产（上游只处理 `favicon`）
+- 快照测试断言改为读取当前配置的 favicon / logo，不再写死 `menav.svg`
+- 部署工作流增加 artifact 可见性轮询：GitHub 侧产物元数据约有 2 秒延迟，上游直接部署会误判为「没有产物」而失败
 - 页脚版权改为站点自身的 `site.title`
 - 首页问候语、日期、待办默认项本地化为中文
 - 搜索框提示文案本地化
