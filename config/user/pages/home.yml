@@ -49,6 +49,10 @@ categories:
   - name: Tom 信奥
     icon: fas fa-user-astronaut
     sites:
+      - name: Tom 的 C++ 竞赛书
+        url: https://mrhowe2118.github.io/cpp_book/
+        icon: fas fa-book-open
+        description: 从零开始的 C++ 竞赛教材，跟着章节顺序学
       - name: 哔哩哔哩
         url: https://www.bilibili.com
         icon: fab fa-bilibili

@@ -5,6 +5,14 @@ subtitle: 教程 · 可视化 · 数学工具
 template: page
 
 categories:
+  - name: Tom 信奥自编教材
+    icon: fas fa-book-open
+    sites:
+      - name: Tom 的 C++ 竞赛书
+        url: https://mrhowe2118.github.io/cpp_book/
+        icon: fas fa-book-open
+        description: 主线教材，覆盖语言基础到 CSP-J/S 考点，按章节推进
+
   - name: 系统学算法
     icon: fas fa-layer-group
     sites:
