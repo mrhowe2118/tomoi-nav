@@ -28,6 +28,8 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  # 供部署前的 artifact 可见性轮询调用 Actions API
+  actions: read
 
 # 允许一个并发部署
 concurrency:
@@ -157,6 +159,26 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'dist'
+
+      # GitHub 的 artifact 元数据存在最终一致性延迟：
+      # upload-pages-artifact 成功返回后立即查询，可能仍返回 0 条，
+      # 导致 deploy-pages 误判为“没有产物”而失败（本项目已复现 3 次，重跑即过）。
+      # 这里在部署前做一次可见性轮询，命中即继续，最多等 40 秒。
+      - name: Wait for artifact visibility
+        if: ${{ vars.ENABLE_GITHUB_PAGES != 'false' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 20); do
+            count=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+              --jq '[.artifacts[] | select(.name == "github-pages")] | length' 2>/dev/null || echo 0)
+            if [ "${count:-0}" -ge 1 ]; then
+              echo "github-pages artifact 已可见（第 ${i} 次探测，约 $((i * 2)) 秒）"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "40 秒内未探测到 artifact，仍继续部署，由 deploy-pages 自行判断"
 
       - name: Deploy to GitHub Pages
         if: ${{ vars.ENABLE_GITHUB_PAGES != 'false' }}
